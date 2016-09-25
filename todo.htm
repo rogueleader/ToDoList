@@ -1,0 +1,19 @@
+<html ng-app="todo">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="todo.js" ></script>
+</head>
+<body>
+<script >
+	
+</script>
+	<div ng-controller="todoCtrl">
+
+<p> Add a note <input ng-model="note" ng-keyup="$event.keyCode == 13 && add()" /> <button ng-click="add()">  Add </button> </p>
+<ul><li ng-repeat="x in notes">
+<span  ng-mouseenter="changex()" ng-mouseleave="changex()" >	{{x}} <span ng-show="delx" ng-click="del($index)">&times;</span></span>
+</li></ul>  
+{{err}}
+
+	</div>
+</body></html>
